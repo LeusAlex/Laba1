@@ -1,0 +1,13 @@
+1. Очистка:
+  git reset    (отмена добавления)
+  git clean -f (удаление не добавленного) 
+
+2. Перенос ревизии из dev в prd с установкой тэга:
+  git reset HEAD~ --soft 
+  git add .
+  git stash 
+  git checkout "Имя ветки" 
+  git stash pop 
+  git add . 
+  git commit -m "тут ваш комментарий" 
+  git tag "Перенос из dev"
